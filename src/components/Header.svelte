@@ -1,7 +1,17 @@
-<h1><span>med</span>support</h1>
+<a href="/">
+    <h1><span>med</span>support</h1>
+</a>
 
 <style>
+    a {
+        text-decoration: none;
+        color: unset;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 	h1 {
+        margin: 3rem 0;
         color: black;
 		font-family: 'Tinos';
         text-align: center;
