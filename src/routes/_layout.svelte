@@ -1,13 +1,9 @@
 <script>
-	import Nav from '../components/Nav.svelte';
 	import Header from '../components/Header.svelte';
-
-	export let segment;
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Karla&family=Tinos:wght@700&display=swap" rel="stylesheet"/>
 
-<Nav {segment}/>
 <Header/>
 <main>
 	<slot></slot>
