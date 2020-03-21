@@ -2,13 +2,16 @@
 	p {
 		margin: 1em auto;
 	}
+	.promo {
+		font-size: 30px;
+	}
 </style>
 
 <svelte:head>
 	<title>medsupport</title>
 </svelte:head>
 
-<p>Wir vermitteln Studierende zu Krankenhäusern, die Unterstützung benötigen.</p>
+<p class="promo">Wir vermitteln Studierende zu Krankenhäusern, die Unterstützung benötigen.</p>
 <a href="/motivation"><p>Unsere Motivation</p></a>
 
 <h2>Mitmachen!</h2>

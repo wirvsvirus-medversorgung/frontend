@@ -11,9 +11,8 @@
         text-decoration: underline;
     }
 	h1 {
-        margin: 3rem 0;
+        margin: 2rem 0;
         color: black;
-		font-family: 'Tinos';
         text-align: center;
         font-weight: 500;
         font-size: 50px;
