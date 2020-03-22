@@ -1,8 +1,11 @@
 <script>
 	import Header from '../components/Header.svelte';
+	import LoggedIn from "../components/LoggedIn.svelte";
 </script>
 
-<Header/>
+<Header>
+	<LoggedIn/>
+</Header>
 <main>
 	<slot></slot>
 </main>

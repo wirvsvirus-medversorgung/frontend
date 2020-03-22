@@ -1,8 +1,14 @@
 <script>
 import { goto } from "@sapper/app";
+import LoggedIn, {currentUser} from '../components/LoggedIn.svelte'
 
 function onSubmit() {
     goto("/suggestions")
+    currentUser.update(a => {
+        a.loggedIn = true;
+        a.name = "Vorname";
+        return a;
+    })
 }
 </script>
 
