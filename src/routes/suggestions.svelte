@@ -4,7 +4,7 @@
     const params = {
     }
 
-    axios.get('http://localhost:5000/find_hospitals', {params})
+    axios.get('http://rodsec.de:5000/find_hospitals', {params})
     .then(response => {
         results = response.data;
         console.log(results)
