@@ -16,6 +16,8 @@
 
 <h2>Mitmachen!</h2>
 
+<a href="/login"><p>Login</p></a>
+
 <a href="/signup-student"><p>Als Medizinstudierende:r registrieren</p></a>
 
 <a href="/signup-hospital"><p>Als Krankenhaus registrieren</p></a>
