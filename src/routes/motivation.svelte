@@ -2,7 +2,7 @@
 	<title>Motivation</title>
 </svelte:head>
 
-<h1>Unsere Motivation</h1>
+<h2>Unsere Motivation</h2>
 
 <p>COVID-19 führt global zu einer starken Belastung der Menschen und Ressourcen des Gesundheitssystem.
 Es zeichnet sich ab, dass auch Personal im deutschen Gesundheitswesen eine immer knapper werdende Ressource sein wird.</p>

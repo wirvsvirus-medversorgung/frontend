@@ -15,8 +15,8 @@
         color: black;
         text-align: center;
         font-weight: 500;
-        font-size: 50px;
-        line-height: 60px;
+        font-size: 2.5em;
+        line-height: 100%;
     }
     span {
         color: #6A1758;
