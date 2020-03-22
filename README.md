@@ -26,7 +26,13 @@ npm run dev
 
 Webbrowser [localhost:3000](http://localhost:3000) aufrufen.
 
+#### Build with
+
+Die Weboberfläche wurde mit [Sapper](https://sapper.svelte.dev/) implementiert.
+
 ## Links
 [Hackaton](https://wirvsvirushackathon.devpost.com/)
+
 [Slack](wirvsvirus.slack.com)
+
 [Backend](https://github.com/wirvsvirus-medversorgung/backend)
