@@ -1,7 +1,6 @@
 <script context="module">
 import { writable } from 'svelte/store';
 export const currentUser = writable({name: undefined, loggedIn: false})
-currentUser.subscribe(a=>console.log(a))
 function logout() {
     currentUser.set({loggedIn: false})
 }

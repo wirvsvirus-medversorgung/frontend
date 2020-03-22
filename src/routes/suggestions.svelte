@@ -7,10 +7,9 @@
     axios.get('http://localhost:5000/find_hospitals', {params})
     .then(response => {
         results = response.data;
-        console.log(results)
         results.map(result => {
-            if(!result.notiz) result.notiz = "(Hinweis fehlt)"
-            return result
+            if(!result.notiz) result.notiz = "(Hinweis fehlt)";
+            return result;
         })
     }).catch(error => {
         console.log(error);
