@@ -1,6 +1,6 @@
 <script>
 import { goto } from "@sapper/app";
-import {currentUser} from '../components/LoggedIn.svelte'
+import {currentUser} from '../components/LoggedIn.svelte';
 
 let email;
 let vorname, nachname;
@@ -15,6 +15,10 @@ function onSubmit() {
     })
 }
 </script>
+
+<svelte:head>
+	<title>medsupport - Registrierung für Studierende</title>
+</svelte:head>
 
 <h2>Registrierung für Studierende</h2>
 

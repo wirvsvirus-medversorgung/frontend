@@ -8,7 +8,7 @@
 </style>
 
 <svelte:head>
-	<title>medsupport</title>
+	<title>medsupport - Startseite</title>
 </svelte:head>
 
 <p class="promo">Wir vermitteln Medizinstudierende zu Krankenhäusern, die Unterstützung benötigen.</p>

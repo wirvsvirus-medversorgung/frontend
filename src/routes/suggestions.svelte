@@ -1,20 +1,18 @@
 <script>
     import axios from 'axios';
     let results;
-    const params = {
-    }
 
-    axios.get('http://localhost:5000/find_hospitals', {params})
+    axios.get('http://localhost:5000/find_hospitals', {})
     .then(response => {
         results = response.data;
-        results.map(result => {
-            if(!result.notiz) result.notiz = "(Hinweis fehlt)";
-            return result;
-        })
     }).catch(error => {
         console.log(error);
     })
 </script>
+
+<svelte:head>
+	<title>medsupport - Vorgeschlagene Krankenhäuser</title>
+</svelte:head>
 
 <h2>Vorgeschlagene Krankenhäuser</h2>
 
@@ -24,7 +22,9 @@
         <p><strong>{result.name}</strong></p>
         <p><i>{result.distance} m entfernt</i></p>
         <p>{result.address}</p>
-        <p>{result.notiz}</p>
+        {#if result.notiz}
+            <p>{result.notiz}</p>
+        {/if}
     </div>
 {/each}
 {:else}

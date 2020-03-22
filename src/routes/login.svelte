@@ -1,6 +1,6 @@
 <script>
 import { goto } from "@sapper/app";
-import {currentUser} from '../components/LoggedIn.svelte'
+import {currentUser} from '../components/LoggedIn.svelte';
 let email = "";
 
 function onSubmit(e) {
@@ -14,10 +14,13 @@ function onSubmit(e) {
 }
 </script>
 
+<svelte:head>
+	<title>medsupport - Login</title>
+</svelte:head>
+
 <h2>Login</h2>
 
 <form on:submit|preventDefault={onSubmit}>
-
     <label>E-Mail-Adresse</label>
     <input type="text" bind:value={email} name="emailaddress">
     

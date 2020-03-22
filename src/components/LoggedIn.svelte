@@ -1,8 +1,8 @@
 <script context="module">
 import { writable } from 'svelte/store';
-export const currentUser = writable({name: undefined, loggedIn: false})
+export const currentUser = writable({loggedIn: false});
 function logout() {
-    currentUser.set({loggedIn: false})
+    currentUser.set({loggedIn: false});
 }
 </script>
 

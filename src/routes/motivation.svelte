@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Motivation</title>
+	<title>medsupport - Motivation</title>
 </svelte:head>
 
 <h2>Unsere Motivation</h2>

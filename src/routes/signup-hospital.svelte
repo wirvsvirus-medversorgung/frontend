@@ -1,10 +1,25 @@
 <script>
 import { goto } from "@sapper/app";
+import {currentUser} from '../components/LoggedIn.svelte';
+
+let email;
+let vorname, nachname;
 
 function onSubmit() {
     goto("/")
+    
+    currentUser.update(a => {
+        a.loggedIn = true;
+        a.name = vorname + ' ' + nachname;
+        a.email = email;
+        return a;
+    })
 }
 </script>
+
+<svelte:head>
+	<title>medsupport - Registrierung für Krankenhäuser</title>
+</svelte:head>
 
 <h2>Registrierung für Krankenhäuser</h2>
 <form on:submit|preventDefault={onSubmit}>
@@ -26,13 +41,13 @@ function onSubmit() {
     
     <h3>Angaben zur Kontaktperson</h3>
     <label>Vorname</label>
-    <input type="text" name="vorname">
+    <input type="text" bind:value={vorname} name="vorname">
     <label>Nachname</label>
-    <input type="text" name="nachname">
+    <input type="text" bind:value={nachname}  name="nachname">
     <label>Telefonnummer</label>
     <input type="text" name="phonenumber">
     <label>E-Mail-Adresse</label>
-    <input type="text" name="emailaddress">
+    <input type="text" bind:value={email} name="emailaddress">
     <label>Passwort fürs Login</label>
     <input type="password" name="password">
     <label>Passwort bestätigen</label>
