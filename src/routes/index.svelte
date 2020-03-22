@@ -12,7 +12,7 @@
 </svelte:head>
 
 <p class="promo">Wir vermitteln Medizinstudierende zu Krankenhäusern, die Unterstützung benötigen.</p>
-<a href="/motivation"><p>Unsere Motivation</p></a>
+<a href="/motivation"><p>Unsere Motivation und die Idee hinter dem Projekt</p></a>
 
 <h2>Mitmachen!</h2>
 
