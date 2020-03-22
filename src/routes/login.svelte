@@ -26,7 +26,7 @@ function onSubmit() {
 </form>
 
 <style>
-     input[type=number], input[type=text], input[type=password] {
+    input[type=text], input[type=password] {
         margin-bottom: 1rem;
     }
     input[type=submit] {
