@@ -11,28 +11,34 @@ function onSubmit() {
 <form on:submit|preventDefault={onSubmit}>
     <label>Vorname</label>
     <input type="text" name="vorname">
-    <br/>
+    
     <label>Nachname</label>
     <input type="text" name="nachname">
-    <br/>
+    
     <label>Ich studiere Medizin im sovielten Semester</label>
     <input type="number" min=1 name="semester">
-    <br/>
+
+    <label>Ich wohne in</label>
+    <input type="text" name="location">
+    
+    <label>Ich mag in einem Umkreis von so vielen km helfen.</label>
+    <input type="number" min=1 name="radius">
+    
     <label>Telefonnummer</label>
     <input type="text" name="phonenumber">
-    <br/>
+    
     <label>E-Mail-Adresse</label>
     <input type="text" name="emailaddress">
-    <br/>
+    
     <label>Passwort</label>
     <input type="password" name="password">
-    <br/>
+    
     <label>Passwort bestätigen</label>
     <input type="password" name="password-confirmation">
-    <br/>
+    
     <input type="checkbox" name="confirm-dataprocessing" required>
     <label>Ich stimme zu, dass meine persönlichen Angaben gemäß der <a href="/datenschutz">Datenschutzerklärung</a> aufgenommen und verarbeitet werden.</label>
-    <br/>
+    
     <input type="submit" value="Registieren">
 </form>
 
@@ -43,7 +49,8 @@ function onSubmit() {
     input[type=submit] {
         margin-top: 1rem;
     }
-    br + label, label:first-child {
+    label + input {
         display: block;
+        margin: 0;
     }
 </style>
