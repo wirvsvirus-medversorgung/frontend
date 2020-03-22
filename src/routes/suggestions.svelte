@@ -22,7 +22,8 @@
 {#if results && results.length > 0}
 {#each results as result, i}
     <div class="result">
-        <p><strong>{result.name}</strong> <i>{result.distance} km entfernt</i></p>
+        <p><strong>{result.name}</strong></p>
+        <p><i>{result.distance} m entfernt</i></p>
         <p>{result.address}</p>
         <p>{result.notiz}</p>
     </div>

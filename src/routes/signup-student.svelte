@@ -27,13 +27,16 @@ function onSubmit() {
     
     <label>Ich studiere Medizin im sovielten Semester</label>
     <input type="number" min=1 name="semester">
+    
+    <label>Medizinische Vorerfahrungen und Kompetenzen</label>
+    <input type="text" name="experience">
 
     <label>Ich wohne in</label>
     <input type="text" name="location">
     
     <label>Ich mag in einem Umkreis von so vielen km helfen.</label>
     <input type="number" min=1 name="radius">
-    
+
     <label>Telefonnummer</label>
     <input type="text" name="phonenumber">
     
