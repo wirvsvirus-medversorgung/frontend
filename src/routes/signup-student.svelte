@@ -1,8 +1,18 @@
 <script>
 import { goto } from "@sapper/app";
+import {currentUser} from '../components/LoggedIn.svelte'
+
+let email;
+let vorname, nachname;
 
 function onSubmit() {
     goto("/")
+    currentUser.update(a => {
+        a.loggedIn = true;
+        a.name = vorname + ' ' + nachname;
+        a.email = email;
+        return a;
+    })
 }
 </script>
 
@@ -10,10 +20,10 @@ function onSubmit() {
 
 <form on:submit|preventDefault={onSubmit}>
     <label>Vorname</label>
-    <input type="text" name="vorname">
+    <input type="text" bind:value={vorname} name="vorname">
     
     <label>Nachname</label>
-    <input type="text" name="nachname">
+    <input type="text" bind:value={nachname} name="nachname">
     
     <label>Ich studiere Medizin im sovielten Semester</label>
     <input type="number" min=1 name="semester">
@@ -28,7 +38,7 @@ function onSubmit() {
     <input type="text" name="phonenumber">
     
     <label>E-Mail-Adresse</label>
-    <input type="text" name="emailaddress">
+    <input type="text" bind:value={email} name="emailaddress">
     
     <label>Passwort</label>
     <input type="password" name="password">
