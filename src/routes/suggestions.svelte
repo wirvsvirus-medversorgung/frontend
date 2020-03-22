@@ -2,31 +2,18 @@
     import axios from 'axios';
     let results;
     const params = {
-        locate: 'Berlin',
-        json: '1'
     }
 
-    //eigentlich anfrage ans backend
-    axios.get('https://geocode.xyz', {params})
+    axios.get('http://localhost:5000/find_hospitals', {params})
     .then(response => {
-        console.log(response.data);
-        return Promise.resolve([response.data.longt, response.data.latt])
+        results = response.data;
+        console.log(results)
+        results.map(result => {
+            if(!result.notiz) result.notiz = "(Hinweis fehlt)"
+            return result
+        })
     }).catch(error => {
         console.log(error);
-    }).then(() => {
-        results = [
-            { //dummy data
-                name: "Krankenhaus 1",
-                distance: "3",
-                address: "Wiesenweg 4, Köln",
-                description: "Wir benötigen 4 Studenten für die Intensivpflege."
-            },{ //dummy data
-                name: "Krankenhaus 2",
-                distance: "19",
-                address: "Wiesengrund 80, Meerane",
-                description: "Wir benötigen 8 Studenten zur Beatmung."
-            }
-        ]
     })
 </script>
 
@@ -37,7 +24,7 @@
     <div class="result">
         <p><strong>{result.name}</strong> <i>{result.distance} km entfernt</i></p>
         <p>{result.address}</p>
-        <p>{result.description}</p>
+        <p>{result.notiz}</p>
     </div>
 {/each}
 {:else}
