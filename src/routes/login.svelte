@@ -1,12 +1,13 @@
 <script>
 import { goto } from "@sapper/app";
 import LoggedIn, {currentUser} from '../components/LoggedIn.svelte'
+let email = "";
 
-function onSubmit() {
+function onSubmit(e) {
     goto("/suggestions")
     currentUser.update(a => {
         a.loggedIn = true;
-        a.name = "Vorname";
+        a.name = email.charAt(0).toUpperCase() + email.split("@")[0].slice(1);
         return a;
     })
 }
@@ -17,7 +18,7 @@ function onSubmit() {
 <form on:submit|preventDefault={onSubmit}>
 
     <label>E-Mail-Adresse</label>
-    <input type="text" name="emailaddress">
+    <input type="text" bind:value={email} name="emailaddress">
     
     <label>Passwort</label>
     <input type="password" name="password">
