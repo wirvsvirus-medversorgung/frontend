@@ -17,10 +17,14 @@
         results = [
             { //dummy data
                 name: "Krankenhaus 1",
-                dist: "3 km",
-                address: "Wiesenweg 4",
-                urgency: "hoch",
-                text: "Weitere Information"
+                distance: "3",
+                address: "Wiesenweg 4, Köln",
+                description: "Wir benötigen 4 Studenten für die Intensivpflege."
+            },{ //dummy data
+                name: "Krankenhaus 2",
+                distance: "19",
+                address: "Wiesengrund 80, Meerane",
+                description: "Wir benötigen 8 Studenten zur Beatmung."
             }
         ]
     })
@@ -31,9 +35,9 @@
 {#if results && results.length > 0}
 {#each results as result, i}
     <div class="result">
-        {#each Object.keys(result) as key}
-            <p><strong>{key}</strong>: {result[key]}</p>
-        {/each}
+        <p><strong>{result.name}</strong> <i>{result.distance} km entfernt</i></p>
+        <p>{result.address}</p>
+        <p>{result.description}</p>
     </div>
 {/each}
 {:else}
