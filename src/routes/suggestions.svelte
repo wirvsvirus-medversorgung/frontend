@@ -26,6 +26,8 @@
     })
 </script>
 
+<h2>Vorgeschlagene Krankenhäuser</h2>
+
 {#if results && results.length > 0}
 {#each results as result, i}
     <div class="result">
