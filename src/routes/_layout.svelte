@@ -12,7 +12,7 @@
 		position: relative;
 		max-width: 50em;
 		padding: 0 2em;
-		margin: 0 auto;
+		margin: 2em auto;
 		box-sizing: border-box;
 	}
 </style>

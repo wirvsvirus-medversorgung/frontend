@@ -2,34 +2,42 @@
 import { goto } from "@sapper/app";
 
 function onSubmit() {
-    goto("/suggestions")
+    goto("/")
 }
 </script>
 
-<h2>Registrierung für Studierende</h2>
-
+<h2>Registrierung für Krankenhäuser</h2>
 <form on:submit|preventDefault={onSubmit}>
+    <h3>Angaben zum Krankenhaus</h3>
+    <label>Name des Krankenhaus</label>
+    <input type="text" name="name">
+    <label>Straße und Hausnummer</label>
+    <input type="text" name="streetAddress">
+    <label>Postleitzahl</label>
+    <input type="text" name="postalCode">
+    <label>Stadt</label>
+    <input type="text" name="city">
+    
+    <h3>Angaben zum Bedarf</h3>
+    <label>Anzahl Aushilfen gesucht</label>
+    <input type="number" min=0 name="searchedPerson">
+    <label>Beschreibung zu Aufgaben</label>
+    <input type="text" name="description">
+    
+    <h3>Angaben zur Kontaktperson</h3>
     <label>Vorname</label>
     <input type="text" name="vorname">
-    <br/>
     <label>Nachname</label>
     <input type="text" name="nachname">
-    <br/>
-    <label>Ich studiere Medizin im sovielten Semester</label>
-    <input type="number" min=1 name="semester">
-    <br/>
     <label>Telefonnummer</label>
     <input type="text" name="phonenumber">
-    <br/>
     <label>E-Mail-Adresse</label>
     <input type="text" name="emailaddress">
-    <br/>
-    <label>Passwort</label>
+    <label>Passwort fürs Login</label>
     <input type="password" name="password">
-    <br/>
     <label>Passwort bestätigen</label>
     <input type="password" name="password-confirmation">
-    <br/>
+    
     <input type="checkbox" name="confirm-dataprocessing" required>
     <label>Ich stimme zu, dass meine persönlichen Angaben gemäß der <a href="/datenschutz">Datenschutzerklärung</a> aufgenommen und verarbeitet werden.</label>
     <br/>
@@ -43,7 +51,11 @@ function onSubmit() {
     input[type=submit] {
         margin-top: 1rem;
     }
-    br + label, label:first-child {
+    label + input {
         display: block;
+        margin: 0;
+    }
+    h3 {
+        margin: 1em 0;
     }
 </style>

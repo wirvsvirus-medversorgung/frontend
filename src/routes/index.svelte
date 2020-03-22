@@ -18,6 +18,6 @@
 
 <a href="/signup-student"><p>Als Medizinstudierende:r registrieren</p></a>
 
-<a href="/signup-hostpital"><p>Als Krankenhaus registrieren</p></a>
+<a href="/signup-hospital"><p>Als Krankenhaus registrieren</p></a>
 
 <p><i>Entstanden im Rahmen des Hackathons #WirVsVirus</i></p>
