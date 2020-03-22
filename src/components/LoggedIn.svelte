@@ -2,11 +2,14 @@
 import { writable } from 'svelte/store';
 export const currentUser = writable({name: undefined, loggedIn: false})
 currentUser.subscribe(a=>console.log(a))
+function logout() {
+    currentUser.set({loggedIn: false})
+}
 </script>
 
 <div class="loggedIn">
     {#if $currentUser.loggedIn}
-        {$currentUser.name} <a href="/profile">Mein Profil</a>
+        {$currentUser.name} <a href="/profile">Mein Profil</a> <a href="/" on:click={logout}>Logout</a>
     {:else}
         <a href="/login">Login</a>
     {/if}
@@ -18,5 +21,8 @@ currentUser.subscribe(a=>console.log(a))
         float: right;
         margin-right: 2em;
         margin-bottom: 2em;
+    }
+    a {
+        text-decoration: underline;
     }
 </style>
