@@ -2,7 +2,7 @@
 import { goto } from "@sapper/app";
 
 function onSubmit() {
-    goto("/suggestions")
+    goto("/")
 }
 </script>
 
